@@ -1,0 +1,406 @@
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/Laurentiu/.git/
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 ~ (master)
+$ cd d:
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d
+$ cd proiect
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect
+$ git init
+Initialized empty Git repository in D:/proiect/.git/
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        costume moca.jpg
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git add costume
+fatal: pathspec 'costume' did not match any files
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git add costume.jpg
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   costume.jpg
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git commit -m "poza noua"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Laurentiu@DESKTOP-8NONEN0.(none)')
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git config --global user.email "lcirtiu@gmail.com"
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git config --global user.name "laurentiucirtiu"
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git commit -m "poza noua"
+[master (root-commit) 2bafb1d] poza noua
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 costume.jpg
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git brench -M poze
+git: 'brench' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (master)
+$ git branch -M poze
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git remote add origin https://github.com/laurentiucirtiu/test1.git
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git push
+fatal: The current branch poze has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin poze
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$   git push --set-upstream origin poze
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323.63 KiB | 24.89 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/laurentiucirtiu/test1.git
+ * [new branch]      poze -> poze
+Branch 'poze' set up to track remote branch 'poze' from 'origin'.
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fisier.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git add *
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   fisier.txt
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git commit
+Aborting commit due to empty commit message.
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git commit -m "fisier nou"
+[poze 7a8c6fd] fisier nou
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fisier.txt
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is ahead of 'origin/poze' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 295.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/laurentiucirtiu/test1.git
+   2bafb1d..7a8c6fd  poze -> poze
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   fisier.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fisier2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git add fisier.txt
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   fisier.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fisier2.txt
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git add *
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   fisier.txt
+        new file:   fisier2.txt
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git commit -m "fisiere modificate"
+[poze 12076ce] fisiere modificate
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 fisier2.txt
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 371 bytes | 371.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/laurentiucirtiu/test1.git
+   7a8c6fd..12076ce  poze -> poze
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+nothing to commit, working tree clean
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fisier3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git reset --hard
+HEAD is now at 12076ce fisiere modificate
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git status
+On branch poze
+Your branch is up to date with 'origin/poze'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    costume.jpg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fisier3.txt
+        index.jpg
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git add index.jpg
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git commit -m "poza noua"
+[poze bfe36c3] poza noua
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.jpg
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git checkout -b br1_test
+Switched to a new branch 'br1_test'
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git status
+On branch br1_test
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    costume.jpg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fisier3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git add *
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git commit -m "modificare"
+[br1_test e3b93d7] modificare
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fisier3.txt
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git push
+fatal: The current branch br1_test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin br1_test
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$   git push --set-upstream origin br1_test
+
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 5.62 KiB | 5.62 MiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'br1_test' on GitHub by visiting:
+remote:      https://github.com/laurentiucirtiu/test1/pull/new/br1_test
+remote:
+To https://github.com/laurentiucirtiu/test1.git
+ * [new branch]      br1_test -> br1_test
+Branch 'br1_test' set up to track remote branch 'br1_test' from 'origin'.
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git status
+On branch br1_test
+Your branch is up to date with 'origin/br1_test'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    costume.jpg
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git rm *
+rm 'fisier.txt'
+rm 'fisier2.txt'
+rm 'fisier3.txt'
+rm 'index.jpg'
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git restore
+fatal: you must specify path(s) to restore
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git reset --hard
+HEAD is now at e3b93d7 modificare
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git rm costume.jpg
+rm 'costume.jpg'
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git status
+On branch br1_test
+Your branch is up to date with 'origin/br1_test'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    costume.jpg
+
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git commit -m "update"
+[br1_test d35d99b] update
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 costume.jpg
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 215 bytes | 215.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/laurentiucirtiu/test1.git
+   e3b93d7..d35d99b  br1_test -> br1_test
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ git checkout poze
+Switched to branch 'poze'
+Your branch is ahead of 'origin/poze' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (poze)
+$ git checkout br1_test
+Switched to branch 'br1_test'
+Your branch is up to date with 'origin/br1_test'.
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$ ^C
+
+Laurentiu@DESKTOP-8NONEN0 MINGW64 /d/proiect (br1_test)
+$
